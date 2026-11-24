@@ -2,6 +2,8 @@
 
 Tento soubor zaznamenává použité obsahové zdroje a shrnuje zadání a výstupy konverzace při tvorbě stránky. Uživatelské zprávy jsou citovány v rozsahu potřebném k dokumentaci zadání. Nejde o úplný export konverzace ani o doslovný přepis zdrojového kódu.
 
+Online verze citací podle pokynu uživatele: [github.com/Dhrickova/algoritmy/blob/main/citace.md](https://github.com/Dhrickova/algoritmy/blob/main/citace.md).
+
 ## Použitý obsahový zdroj
 
 - **Algoritmizace – zpracování textu** (`algo1.md`). Soubor dodaný uživatelem `říkat nebudu, soukromí :)`; autor, datum vydání ani veřejná URL v podkladu nejsou uvedeny. Obsahuje definici algoritmu, jeho vlastnosti, formy zápisu, značky vývojových diagramů, testové otázky a klíč odpovědí.
@@ -22,7 +24,7 @@ Výukový obsah na stránce je z tohoto podkladu zkráceně převyprávěn. Otá
 - `index.html`, `style.css` a `script.js` — česká vzdělávací stránka o algoritmech, její styly a interaktivní test.
 - `citace.md` — citace podkladového souboru; tento soubor byl následně na žádost uživatele rozšířen o nynější záznam konverzace.
 - Ověření v prohlížeči: všech pět správných odpovědí vedlo ke skóre 5/5, neúplný test zobrazil upozornění a reset vymazal výsledek. Na mobilním zobrazení o šířce 375 px nebyl zjištěn vodorovný přetok. Zkontrolovány také duplicitní identifikátory a nefunkční interní odkazy; nebyly nalezeny. Formální validátor HTML nebyl spuštěn.
-- Stránka nebyla publikována na GitHub. Ve složce v době ověření nebyl Git repozitář a uživatel následně zrušil žádost o upřesnění GitHub účtu a repozitáře. Veřejný odkaz proto nebyl vytvořen.
+- Při původním ověření stránka nebyla publikována na GitHub a ve složce nebyl Git repozitář. Následně uživatel určil online adresu citací uvedenou výše.
 
 ### 2. Změna designu
 
