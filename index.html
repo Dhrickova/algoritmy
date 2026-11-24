@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Srozumitelný úvod do algoritmů, jejich vlastností, způsobů zápisu a vývojových diagramů. Ověřte si znalosti v krátkém testu.">
+    <meta name="theme-color" content="#21142f">
+    <title>Algoritmy — jasný postup, správný výsledek</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+    <header class="site-header">
+      <a class="brand" href="#uvod" aria-label="Algoritmy — úvod">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>algoritmy<span class="brand-period">.</span></span>
+      </a>
+      <nav aria-label="Hlavní navigace">
+        <a href="#zaklady">Základy</a>
+        <a href="#zapis">Zápis</a>
+        <a href="#diagramy">Diagramy</a>
+        <a href="#otevrene-ulohy">Úlohy</a>
+        <a class="nav-cta" href="#test">Vyzkoušet test <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="obsah">
+      <section class="hero" id="uvod" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> ZÁKLADY INFORMATIKY · LEKCE 01</p>
+          <h1 id="hero-title">Nejdřív dobrý postup.<br><span>Pak teprve kód.</span></h1>
+          <p class="hero-text">Algoritmus je přesný návod, jak dojít od zadání k výsledku. Počítač udělá každý krok za vás — ale jen tehdy, když mu řeknete přesně, co má dělat.</p>
+          <a class="button button-primary" href="#zaklady">Pochopit základy <span aria-hidden="true">↓</span></a>
+          <p class="hero-note"><span aria-hidden="true">✳</span> Pro každého, kdo chce přemýšlet jako programátor.</p>
+        </div>
+        <div class="hero-visual" role="img" aria-label="Ilustrace postupu od zadání přes algoritmus k výsledku">
+          <div class="visual-caption">OD MYŠLENKY K VÝSLEDKU</div>
+          <div class="flow-step"><span class="step-number">01</span><span class="step-icon step-input" aria-hidden="true">?</span><span class="step-label">Zadání</span></div>
+          <div class="flow-connector" aria-hidden="true"><span></span></div>
+          <div class="flow-step flow-step-active"><span class="step-number">02</span><span class="step-icon step-process" aria-hidden="true">↗</span><span class="step-label">Algoritmus</span><span class="step-badge">PŘESNÝ POSTUP</span></div>
+          <div class="flow-connector" aria-hidden="true"><span></span></div>
+          <div class="flow-step"><span class="step-number">03</span><span class="step-icon step-output" aria-hidden="true">✓</span><span class="step-label">Výsledek</span></div>
+          <div class="visual-grid" aria-hidden="true"></div>
+          <span class="visual-orbit orbit-one" aria-hidden="true"></span>
+          <span class="visual-orbit orbit-two" aria-hidden="true"></span>
+        </div>
+      </section>
+
+      <section class="section basics" id="zaklady" aria-labelledby="basics-title">
+        <div class="section-heading">
+          <p class="eyebrow">01 / ZÁKLADNÍ STAVEBNÍ KÁMEN</p>
+          <h2 id="basics-title">Co přesně je <span>algoritmus?</span></h2>
+          <p class="section-intro">Je to konečná a srozumitelná řada kroků, která řeší určitý problém. Než začnete psát program, musíte nejdřív vymyslet právě tento postup.</p>
+        </div>
+        <div class="definition-card">
+          <span class="definition-mark" aria-hidden="true">“</span>
+          <blockquote>Algoritmus je přesný postup, který je potřeba k vykonání určité činnosti.</blockquote>
+          <p>Stejně jako recept: jasné pokyny, správné pořadí a výsledek, který umíte zopakovat.</p>
+        </div>
+        <div class="qualities-heading">
+          <div><p class="eyebrow">KONTROLNÍ SEZNAM</p><h3>Šest vlastností dobrého algoritmu</h3></div>
+          <p>Chybí-li některá, může být výsledek špatný, nebo cesta k němu nikdy neskončí.</p>
+        </div>
+        <div class="qualities-grid">
+          <article class="quality-card"><span class="quality-number">01</span><h4>Konečnost</h4><p>Má jasný začátek i konec. Po konečném počtu kroků skončí.</p></article>
+          <article class="quality-card"><span class="quality-number">02</span><h4>Věcná správnost</h4><p>Využívá správný postup, vzorce i závorky — třeba <code>(A+B)/(C+D)</code>.</p></article>
+          <article class="quality-card"><span class="quality-number">03</span><h4>Jednoznačnost</h4><p>Každý krok je srozumitelný a pokrývá všechny možnosti.</p></article>
+          <article class="quality-card"><span class="quality-number">04</span><h4>Obecnost</h4><p>Řeší celou skupinu úloh, nejen jeden pevně daný příklad.</p></article>
+          <article class="quality-card"><span class="quality-number">05</span><h4>Opakovatelnost</h4><p>Stejné vstupy a podmínky vedou pokaždé ke stejnému výsledku.</p></article>
+          <article class="quality-card"><span class="quality-number">06</span><h4>Srozumitelnost</h4><p>Člověk se v postupu vyzná a může ho později upravit.</p></article>
+        </div>
+        <aside class="notice"><span class="notice-icon" aria-hidden="true">!</span><p><strong>Myslete i na okrajové případy.</strong> Co když je jmenovatel nula? Nebo je číslo pod odmocninou záporné? Dobře navržený algoritmus s takovými situacemi počítá.</p></aside>
+      </section>
+
+      <section class="section writing" id="zapis" aria-labelledby="writing-title">
+        <div class="section-heading">
+          <p class="eyebrow">02 / JEDEN POSTUP, VÍCE JAZYKŮ</p>
+          <h2 id="writing-title">Jak algoritmus <span>zapsat?</span></h2>
+          <p class="section-intro">Záleží na tom, komu postup vysvětlujete a jak složitý problém řešíte. Každý způsob má své místo.</p>
+        </div>
+        <div class="writing-list">
+          <article class="writing-item"><span class="writing-index">01</span><div><h3>Slovní vyjádření</h3><p>Popište kroky běžným jazykem. Ideální při vysvětlování nápadu nebo psaní návodu.</p></div><span class="writing-tag">SROZUMITELNÉ</span></article>
+          <article class="writing-item"><span class="writing-index">02</span><div><h3>Matematický zápis</h3><p>Vyjádřete postup pomocí vzorců a vztahů. Přesný, ale sám o sobě neřeší všechny okrajové podmínky.</p></div><span class="writing-tag">STRUČNÝ</span></article>
+          <article class="writing-item"><span class="writing-index">03</span><div><h3>Rozhodovací tabulky</h3><p>Přehledně porovnají kombinace vstupů a jejich výsledky — například pro logické operace AND a OR.</p></div><span class="writing-tag">PŘEHLEDNÉ</span></article>
+          <article class="writing-item"><span class="writing-index">04</span><div><h3>Vývojové diagramy</h3><p>Znázorní tok kroků pomocí značek a šipek. Dobře ukazují, kde se rozhoduje a kam pokračovat.</p></div><span class="writing-tag">VIZUÁLNÍ</span></article>
+          <article class="writing-item"><span class="writing-index">05</span><div><h3>Počítačový program</h3><p>Zápis v programovacím jazyce. Překladač ho převede do podoby, které počítač rozumí.</p></div><span class="writing-tag">SPUSTITELNÝ</span></article>
+        </div>
+      </section>
+
+      <section class="section diagrams" id="diagramy" aria-labelledby="diagrams-title">
+        <div class="section-heading">
+          <p class="eyebrow">03 / ČTI ZNAČKY, SLEDUJ TOK</p>
+          <h2 id="diagrams-title">Základní značky <span>diagramu</span></h2>
+          <p class="section-intro">Ve vývojovém diagramu postupujeme obvykle shora dolů a zleva doprava. Tvar bloku napoví, co se právě děje.</p>
+        </div>
+        <div class="diagram-grid">
+          <article class="diagram-card"><span class="diagram-shape shape-terminal" aria-hidden="true">Začátek</span><div><h3>Mezní značka</h3><p>Ovál označuje začátek nebo konec programu.</p></div></article>
+          <article class="diagram-card"><span class="diagram-shape shape-io" aria-hidden="true"><span>Čti: A</span></span><div><h3>Vstup / výstup</h3><p>Kosodélník načte data nebo zobrazí výsledek.</p></div></article>
+          <article class="diagram-card"><span class="diagram-shape shape-process" aria-hidden="true">A := A + B</span><div><h3>Zpracování</h3><p>Obdélník provede výpočet nebo změní data.</p></div></article>
+          <article class="diagram-card"><span class="diagram-shape shape-decision" aria-hidden="true"><span>Je A &gt; 0?</span></span><div><h3>Rozhodnutí</h3><p>Kosočtverec větví cestu podle podmínky na ano a ne.</p></div></article>
+          <article class="diagram-card"><span class="diagram-shape shape-loop" aria-hidden="true"><svg viewBox="0 0 68 38" focusable="false"><polygon points="12,1 56,1 67,19 56,37 12,37 1,19" fill="#f0e3f4" stroke="#bb83b0" stroke-width="1.5"/></svg><span>3×</span></span><div><h3>Příprava</h3><p>Šestiúhelník zahájí cyklus s daným počtem opakování.</p></div></article>
+          <article class="diagram-card"><span class="diagram-shape shape-subroutine" aria-hidden="true">Čti číslo</span><div><h3>Podprogram</h3><p>Obdélník s dvojitými okraji označuje samostatnou část postupu.</p></div></article>
+        </div>
+        <div class="connector-note"><span class="connector-symbol" aria-hidden="true">7</span><p><strong>Spojka:</strong> propojí přerušené části diagramu. Obě části dostanou stejné označení, aby bylo jasné, kam cesta pokračuje.</p></div>
+      </section>
+
+      <section class="quiz-section" id="test" aria-labelledby="quiz-title">
+        <div class="quiz-inner">
+          <div class="quiz-heading">
+            <p class="eyebrow">04 / TEĎ JSTE NA ŘADĚ</p>
+            <h2 id="quiz-title">Ověřte si, co <span>už víte.</span></h2>
+            <p>Pět otázek. Bez stresu — po odeslání uvidíte správné odpovědi i vysvětlení.</p>
+          </div>
+          <form id="quiz-form">
+            <fieldset class="quiz-question" data-question="0">
+              <legend><span class="question-number">01</span> Co se stane, když algoritmus počítá podle nesprávného vzorce?</legend>
+              <label class="quiz-option"><input type="radio" name="q0" value="a"><span class="option-letter">A</span><span>Program se vždy zacyklí.</span></label>
+              <label class="quiz-option"><input type="radio" name="q0" value="b"><span class="option-letter">B</span><span>Program proběhne, ale dá chybný výsledek.</span></label>
+              <label class="quiz-option"><input type="radio" name="q0" value="c"><span class="option-letter">C</span><span>Počítač automaticky opraví vzorec.</span></label>
+              <p class="answer-feedback" aria-live="polite"></p>
+            </fieldset>
+            <fieldset class="quiz-question" data-question="1">
+              <legend><span class="question-number">02</span> Který zápis odpovídá zlomku (A + B) / (C + D)?</legend>
+              <label class="quiz-option"><input type="radio" name="q1" value="a"><span class="option-letter">A</span><span><code>A + B / C + D</code></span></label>
+              <label class="quiz-option"><input type="radio" name="q1" value="b"><span class="option-letter">B</span><span><code>(A + B) / (C + D)</code></span></label>
+              <label class="quiz-option"><input type="radio" name="q1" value="c"><span class="option-letter">C</span><span><code>A + B / (C + D)</code></span></label>
+              <p class="answer-feedback" aria-live="polite"></p>
+            </fieldset>
+            <fieldset class="quiz-question" data-question="2">
+              <legend><span class="question-number">03</span> Jakou značkou se v diagramu znázorňuje vstup dat?</legend>
+              <label class="quiz-option"><input type="radio" name="q2" value="a"><span class="option-letter">A</span><span>Ovál se slovem „Začátek“</span></label>
+              <label class="quiz-option"><input type="radio" name="q2" value="b"><span class="option-letter">B</span><span>Kosočtverec s podmínkou</span></label>
+              <label class="quiz-option"><input type="radio" name="q2" value="c"><span class="option-letter">C</span><span>Kosodélník s příkazem „Čti:“</span></label>
+              <p class="answer-feedback" aria-live="polite"></p>
+            </fieldset>
+            <fieldset class="quiz-question" data-question="3">
+              <legend><span class="question-number">04</span> Která vlastnost zaručuje stejný výsledek pro stejné vstupy?</legend>
+              <label class="quiz-option"><input type="radio" name="q3" value="a"><span class="option-letter">A</span><span>Obecnost</span></label>
+              <label class="quiz-option"><input type="radio" name="q3" value="b"><span class="option-letter">B</span><span>Srozumitelnost</span></label>
+              <label class="quiz-option"><input type="radio" name="q3" value="c"><span class="option-letter">C</span><span>Opakovatelnost</span></label>
+              <p class="answer-feedback" aria-live="polite"></p>
+            </fieldset>
+            <fieldset class="quiz-question" data-question="4">
+              <legend><span class="question-number">05</span> Co dělá překladač?</legend>
+              <label class="quiz-option"><input type="radio" name="q4" value="a"><span class="option-letter">A</span><span>Převádí program do strojového kódu.</span></label>
+              <label class="quiz-option"><input type="radio" name="q4" value="b"><span class="option-letter">B</span><span>Automaticky odstraňuje logické chyby.</span></label>
+              <label class="quiz-option"><input type="radio" name="q4" value="c"><span class="option-letter">C</span><span>Převádí program na vývojový diagram.</span></label>
+              <p class="answer-feedback" aria-live="polite"></p>
+            </fieldset>
+            <div class="quiz-actions">
+              <button class="button button-primary" type="submit">Vyhodnotit test <span aria-hidden="true">→</span></button>
+              <button class="button button-secondary" type="reset">Zkusit znovu</button>
+              <p class="quiz-result" id="quiz-result" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section open-tasks" id="otevrene-ulohy" aria-labelledby="open-tasks-title">
+        <div class="section-heading">
+          <p class="eyebrow">05 / PROCVIČTE SI VLASTNÍMI SLOVY</p>
+          <h2 id="open-tasks-title">Čtyři otevřené <span>úlohy</span></h2>
+          <p class="section-intro">Zkuste odpovědět bez nápovědy. Po vyhodnocení uvidíte správné odpovědi a vysvětlení. Zadané odpovědi se nikam neodesílají.</p>
+        </div>
+        <form id="open-task-form">
+          <div class="open-task-list">
+            <div class="open-task-card" data-open-task="0">
+              <label for="open-answer-1"><span class="open-task-number">01</span><span class="open-task-prompt">Vyjmenujte šest základních vlastností správného algoritmu.</span></label>
+              <textarea id="open-answer-1" name="open-answer-1" rows="3" placeholder="Napište svou odpověď…"></textarea>
+              <p class="open-task-feedback" aria-live="polite"></p>
+            </div>
+            <div class="open-task-card" data-open-task="1">
+              <label for="open-answer-2"><span class="open-task-number">02</span><span class="open-task-prompt">Uveďte dvě podmínky řešitelnosti, které je třeba ošetřit, aby výpočet neselhal.</span></label>
+              <textarea id="open-answer-2" name="open-answer-2" rows="3" placeholder="Napište svou odpověď…"></textarea>
+              <p class="open-task-feedback" aria-live="polite"></p>
+            </div>
+            <div class="open-task-card" data-open-task="2">
+              <label for="open-answer-3"><span class="open-task-number">03</span><span class="open-task-prompt">Vysvětlete vlastními slovy rozdíl mezi logickým AND a OR pro dvě hodnoty A a B.</span></label>
+              <textarea id="open-answer-3" name="open-answer-3" rows="3" placeholder="Napište svou odpověď…"></textarea>
+              <p class="open-task-feedback" aria-live="polite"></p>
+            </div>
+            <div class="open-task-card" data-open-task="3">
+              <label for="open-answer-4"><span class="open-task-number">04</span><span class="open-task-prompt">K čemu slouží spojka ve vývojovém diagramu a jak se označují její propojené části?</span></label>
+              <textarea id="open-answer-4" name="open-answer-4" rows="3" placeholder="Napište svou odpověď…"></textarea>
+              <p class="open-task-feedback" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="open-task-actions">
+            <button class="button button-primary" type="submit">Vyhodnotit otevřené úlohy <span aria-hidden="true">→</span></button>
+            <button class="button open-task-reset" type="reset">Smazat odpovědi</button>
+            <p class="open-task-result" id="open-task-result" role="status" aria-live="polite"></p>
+                  <p class="open-task-note">Automatické vyhodnocení je orientační a hledá klíčové pojmy. Zkontrolujte také uvedené řešení — správně formulovaná odpověď může být označena jako neúplná, pokud používá jiná slova.</p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#uvod"><span class="brand-mark" aria-hidden="true">A</span><span>algoritmy<span class="brand-period">.</span></span></a>
+      <p>Nejdřív přemýšlet. Potom programovat.</p>
+      <nav class="footer-links" aria-label="Zdroje a validace">
+        <a href="citace.md">Zdroje a citace</a>
+        <a href="validace-html.html">Oficiální W3C HTML checker</a>
+        <a href="validace-css.html">Oficiální W3C CSS checker</a>
+      </nav>
+    </footer>
+  </body>
+</html>
